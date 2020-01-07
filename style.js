@@ -1,5 +1,5 @@
 var timeBlock = document.querySelector('.time-block');
-var saveBtn = document.querySelector('.saveBtn');
+var saveBtn = document.querySelectorAll('.saveBtn');
 var textArea= document.querySelector('.textarea');
 
 
@@ -12,16 +12,16 @@ function saveBtnHandler(){
 
 }
 
-saveBtn.addEventListener('click', function(event) {
-    event.preventDefault();  
-    // var data = event.target.previousElementSibling.children[0].value
+saveBtn.forEach(button => {
+    button.addEventListener('click', function(event) {
+        event.preventDefault();  
+        var data = event.target.previousElementSibling.children[0].value
+        var time = event.target.previousElementSibling.previousElementSibling.children[0].innerHTML
+        storedata(time, data)
+    });
+})
 
-    // var data = event.target.previousElementSibling.children[1].value
-    // var time = event.target.previousElementSibling.previousElementSibling.children[0].innerHTML
-    // var time = event.target.previousElementSibling.previousElementSibling.children[1].innerHTML
-    // storedata(time, data)
-    console.log(event)
-});
+
 
 document.getElementById("9am").value = localStorage.getItem("9am");
 document.getElementById("10am").value = localStorage.getItem("10am");
