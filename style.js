@@ -21,8 +21,6 @@ saveBtn.forEach(button => {
     });
 })
 
-
-
 document.getElementById("9am").value = localStorage.getItem("9am");
 document.getElementById("10am").value = localStorage.getItem("10am");
 document.getElementById("11am").value = localStorage.getItem("11am");
