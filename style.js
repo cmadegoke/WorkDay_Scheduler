@@ -4,7 +4,7 @@ var textArea= document.querySelector('.textarea');
 var current_Day= document.querySelector ('#currentDay');
 var current_Hour =document.querySelector('.present');
 
-var m= moment ();
+
   console.log (moment());
 
  current_Day.innerHTML= moment().format('MMMM Do YYYY, h:mm:ss a'); 
@@ -26,6 +26,27 @@ saveBtn.forEach(button => {
         var time = event.target.previousElementSibling.previousElementSibling.children[0].innerHTML
         storedata(time, data)
     });
+})
+
+const test = document.getElementsByClassName('row')
+
+const currentHour = moment().format('h-a')
+let flag = false
+Array.from(test).forEach(i => {
+    if (!flag) {
+        // add className past to the i element
+        i.className += ' past'
+        if (i.id === currentHour) {
+            i.className += ' present'
+            // add className present to the i element
+            flag = true;
+            // set flag to true
+        }
+    } else {
+        // add className future to the i element
+        i.className += ' future'
+    }
+    console.log(i)
 })
 
 
