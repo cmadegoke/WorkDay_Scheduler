@@ -1,17 +1,13 @@
 var timeBlock = document.querySelector('.time-block');
 var saveBtn = document.querySelectorAll('.saveBtn');
 var textArea= document.querySelector('.textarea');
-var current_Day= document.querySelector ('#currentDay')
+var current_Day= document.querySelector ('#currentDay');
+var current_Hour =document.querySelector('.present');
 
-//  var m= (moment());
-//  console.log (moment());
+var m= moment ();
+  console.log (moment());
 
-function moment(){
-var current_Day= moment().format('MMMM Do YYYY, h:mm:ss a');   
-
-}
-
-
+ current_Day.innerHTML= moment().format('MMMM Do YYYY, h:mm:ss a'); 
 
 
 function storedata(key, data){
