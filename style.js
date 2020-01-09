@@ -1,6 +1,17 @@
 var timeBlock = document.querySelector('.time-block');
 var saveBtn = document.querySelectorAll('.saveBtn');
 var textArea= document.querySelector('.textarea');
+var current_Day= document.querySelector ('#currentDay')
+
+//  var m= (moment());
+//  console.log (moment());
+
+function moment(){
+var current_Day= moment().format('MMMM Do YYYY, h:mm:ss a');   
+
+}
+
+
 
 
 function storedata(key, data){
@@ -20,6 +31,7 @@ saveBtn.forEach(button => {
         storedata(time, data)
     });
 })
+
 
 document.getElementById("9am").value = localStorage.getItem("9am");
 document.getElementById("10am").value = localStorage.getItem("10am");
