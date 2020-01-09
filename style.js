@@ -28,11 +28,11 @@ saveBtn.forEach(button => {
     });
 })
 
-const test = document.getElementsByClassName('row')
+var Row1 = document.getElementsByClassName('row')
 
 const currentHour = moment().format('h-a')
 let flag = false
-Array.from(test).forEach(i => {
+Array.from(Row1).forEach(i => {
     if (!flag) {
         // add className past to the i element
         i.className += ' past'
