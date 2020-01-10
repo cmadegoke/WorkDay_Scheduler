@@ -30,7 +30,7 @@ saveBtn.forEach(button => {
 
 var Row1 = document.getElementsByClassName('row')
 
-const currentHour = moment().format('h-a')
+var currentHour = moment().format('h-a')
 let flag = false
 Array.from(Row1).forEach(i => {
     if (!flag) {
